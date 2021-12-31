@@ -16,8 +16,8 @@ Features
 
 
           TEAM MEMBERS                   SECTION
-1. ADDISU MOTORA        UGR/4230/12        1
-2. BENIYAM ALEMU        UGR/4689/12        1
-3. MULUKEN HAKIM        UGR/1110/12        1
-4. NAOL AKLILU          UGR/0207/12        3
-5. USMAEL ABDURHAMAN    UGR/6575/12        2
+1. ADDISU MOTORA        UGR/4230/12      -  1
+2. BENIYAM ALEMU        UGR/4689/12      -  1
+3. MULUKEN HAKIM        UGR/1110/12      -  1
+4. NAOL AKLILU          UGR/0207/12      -  3
+5. USMAEL ABDURHAMAN    UGR/6575/12      -  2
