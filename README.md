@@ -9,3 +9,4 @@ Features
 --> They can also modify and delete their posts, manage their profiles, and completely erase their accounts from the website.
 --> The administrators will have complete control over the accounts generated on the website via the dashboard, which will allow them to assign, revoke, and manage permissions.
 --> The tenant has access to the posts of administrators, tenants, and brokers to get the information they need.
+
