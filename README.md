@@ -1,4 +1,4 @@
-# GOJJO
+# GOJJO-House-Rental
 General Information About GOJJO
 
 The house rental issue is one of the elemental parts of society. Nowadays, it is extremely difficult to find suitable accommodation in city areas if people search for it physically. On the other hand, the house owner also needs to rent the house. It can be difficult to find tenants just to hang a lease sign on a building. The website we're excited to build GOJJO is an online common house renting web platform for both tenants and house owners, with the system benefiting both tenants and house owners. House owners can register for the website and create a personal profile page where they can provide all of the house's data, including its location (city, sub-city, kebele), house number, price, number of rooms, and images. Someone looking for a home can go to the website, look at the houses, and contact the owner
