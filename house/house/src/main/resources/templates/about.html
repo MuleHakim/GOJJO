@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gojjo Rental Application</title> 
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/forHome.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/fontawesome-free-5.15.4-web/css/all.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header class="d-flex shadow align-items-center justify-content-center justify-content-md-between px-3 sticky-top bg-black">
+    <!-- <a href="/index" class="navbar-brand d-flex align-items-center">
+    <img src = "images/gojjologo.jpg" style = "height: 15vh;"></img>
+    </a> -->
+
+    <ul class="nav navbar-collapse justify-content-end ms-auto" id="navmenu">
+      <li class="nav-item">
+          <a class="nav-link " aria-current="page" th:href="@{index}">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" th:href="@{homelist}" >Home List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{news}">GOJJO News</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active" th:href="@{about}">About Us</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" th:href="@{contact}">Contact</a>
+      </li>
+    </ul>
+
+    <div class="">
+      <a th:href="@{profile}"><img src="images/account.jpg" style = "height: 60px; border-radius: 50%;" alt="account_icon"></a>
+    </div>
+  </header>
+  <main class = "bg-black text-white">
+    <div class="row">
+      <div class="col">
+        <div>
+            <img src="/images/blackGojjo.jpg" alt="">
+        </div>
+     </div>
+      <div class="col bg-black">
+        <div class="container_about" >
+          <h1 class="about text-center">ABOUT US</h1>
+          <p style="padding: 5%;">GOJJO is a leading market research company with the country coverage.
+            GOJJO provides research which is based on four simple principles:
+              easy-to-access reports, robust industry coverage, a focus on new and
+               emerging technologies, and competitive pricing. With a focus on emerging
+                markets and technologies, our reports provide actionable insights that will
+                 enable clients to implement business decisions suited to the ever-changing
+                  market landscape. We also keep track of the latest innovations and trends
+                   in all the industries which helps to create value for our clients. GOJJO
+                    offers a blend of off-the-shelf research reports along with customized research,
+                     which will help clients to navigate the dynamic market landscape.</p>
+          
+        </div>
+        <div class="button">
+          <h2>Get in touch with us via:</h2>
+        </div>
+        <div>
+          <ul class = "nav">
+            <li><i class="nav-item px-3 fab fa-facebook"></i></li>
+            <li><i class="nav-item px-3 fab fa-twitter"></i></li>
+            <li><i class="nav-item px-3 fab fa-instagram"></i></li>
+            <li><i class="nav-item px-3 fab fa-telegram"></i></li>
+          </ul>
+        </div>
+      </div>
+  </main>
+  <footer class="py-3 bg-black text-center">
+    <ul class="nav justify-content-center font-weight-bold">
+      <li class="nav-item"><a th:href="@{index}" class="nav-link px-2 ">Home</a></li>
+      <li class="nav-item"><a th:href="@{homelist}" class="nav-link px-2 ">List of houses</a></li>
+      <li class="nav-item"><a th:href="@{news}" class="nav-link px-2 ">News</a></li>
+      <li class="nav-item"><a th:href="@{about}" class="nav-link px-2 ">About</a></li>
+      <li class="nav-item"><a th:href="@{contact}" class="nav-link px-2 ">Contact</a></li>
+    </ul>
+    <p class="text-white">&copy; 2022 Allright Reserved.</p>
+    <a href="#" class="bottom-0 p-5">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+  </footer>
+</body>
+</html> 

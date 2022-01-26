@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gojjo Rental Application</title> 
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/forHome.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+
+</head>
+<body>
+    <header class="d-flex shadow align-items-center justify-content-center justify-content-md-between px-3 mb-5 sticky-top bg-black">
+        <a href="/index" class="navbar-brand d-flex align-items-center">
+            <img src = "images/gojjologo.jpg" style = "height: 15vh; padding: 10%; margin-left: 10%;"></img>
+        </a>
+        <ul class="nav navbar-collapse justify-content-end ms-auto" id="navmenu">
+            <li class="nav-item">
+                <a class="nav-link " th:href="@{index}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{homelist}" >Home List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{news}">GOJJO News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{about}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{contact}">Contact</a>
+            </li>
+        </ul>
+
+        <div class="">
+            <a href="#"><img src="images/account.jpg" style = "height: 60px; border-radius: 50%;" alt="account_icon"></a>
+        </div>
+    </header>
+ 
+    <main class = "container">
+        <!-- <div  th:action ="@{/showComments}" method = "get" >
+          <div class="d-flex mb-5 w-50" style="border: 2px solid black; height: 100px" th:each="com : ${contact}">
+            <div class="flex-shrink-0">
+                <div class = "card-text">name: <span th:text="*{com.name}"></span></div>
+                <div class = "card-text">email: <span th:text="*{com.email}"></span></div>
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <div class="card-body py-0 text-center">
+                    <p style="text-align: center;">comment</p>
+                    <p class = "card-text" th:text="*{com.comment}"></p>
+    
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container" th:action ="@{/showComments}" method = "get">
+        <div class="row"  style="background-color:lightgrey ; padding:5%">
+            <div class="col" Style="padding-left: 3%;"><h4>contact info</h4></div>
+            <div class="col"><h4>comment</h4></div>
+            <hr style="height: 5px;">
+        </div>
+        
+        <div class="row" th:each="com : ${contact}" style="padding:5%; background-color:lightgrey">
+          <div class="col">
+            <div class = "card-text">name: <span th:text="*{com.name}"></span></div>
+            <div class = "card-text">email: <span th:text="*{com.email}"></span></div>
+          </div>
+          <div class="col">
+            <!-- <p style="text-align: center;">comment</p> -->
+            <div class = "card-text" th:text="*{com.comment}"></p>
+          </div>
+        </div>
+        <hr syle="height:3px">
+      </div>
+      <div>
+        <a class = "btn btn-primary justify-content-left mt-3" th:href="@{profile}">Back</a>
+      </div>
+    </main>
+    <footer class="py-3 mt-5 bg-black text-center">
+        <ul class="nav justify-content-center font-weight-bold">
+            <li class="nav-item"><a th:href="@{index}" class="nav-link px-2 ">Home</a></li>
+            <li class="nav-item"><a th:href="@{homelist}" class="nav-link px-2 ">List of houses</a></li>
+            <li class="nav-item"><a th:href="@{news}" class="nav-link px-2 ">News</a></li>
+            <li class="nav-item"><a th:href="@{about}" class="nav-link px-2 ">About</a></li>
+            <li class="nav-item"><a th:href="@{contact}" class="nav-link px-2 ">Contact</a></li>
+        </ul>
+        <p class="text-white">&copy; 2022 Allright Reserved.</p>
+        <a href="#" class="bottom-0 p-5">
+            <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+    </footer>
+    
+</body>
+</html>
