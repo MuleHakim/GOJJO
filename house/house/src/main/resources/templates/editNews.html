@@ -18,34 +18,45 @@
 
 </head>
 <body>
-    <header class="d-flex shadow align-items-center justify-content-center justify-content-md-between px-3 sticky-top bg-black">
+    <nav  class="navbar navbar-expand-lg bg-black navbar-dark justify-content-md-between py-3 sticky-top" >
         <a href="/index" class="navbar-brand d-flex align-items-center">
-            <img src = "images/gojjologo.jpg" style = "height: 15vh; padding: 10%; margin-left: 10%;"></img>
+        <img src = "images/gojjologo.jpg" style = "height: 15vh; padding: 10%; margin-left: 10%;"></img>
         </a>
-        <ul class="nav navbar-collapse justify-content-end ms-auto" id="navmenu">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" th:href="@{index}">Home</a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="nav navbar-collapse navbar-nav ms-auto justify-content-end" id="navmenu">
+            <li class="nav-item ">
+                <a class="nav-link" th:href="@{index}">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" th:href="@{homelist}" >Home List</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{news}">News</a>
+              <a class="nav-link" th:href="@{news}">GOJJO News</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" th:href="@{about}">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{contact}">Contact</a>
+                <a class="nav-link"  th:href="@{contact}">Contact</a>
             </li>
+            <div>
+              <a th:href="@{profile}"><img src="images/account.jpg" style = "height: 60px; border-radius: 50%;" alt="account_icon"></a>
+          </div>
         </ul>
-        <div>
-            <a th:href="@{profile}"><img src="images/account.jpg" style = "height: 60px; border-radius: 50%;" alt="account_icon"></a>
-        </div>
-    </header>
+      
+      </div>
+      </nav >
     <main class = "bg-dark">
         <div class="news-form">
-            <form th:action="@{/saveNewsForm}" method="post" th:object = "${news}" enctype="multipart/form-data" >
+            <form th:action="@{/saveNewsForm}" method="post" th:object = "${news}" enctype="multipart/form-data" novalidate>
                 <div class="form-header">
                      <h2>Edit News</h2>
                      <p>Fill out this form to edit your News</p>
@@ -54,20 +65,20 @@
                     <input type="hidden" th:field = "*{id}">
                 </div>
                 <div class="form-group">
-                    <label>Title</label>
-                    <input type="text" class="form-control" th:field = "*{title}"  required="required">
+                    <input type="text" th:field="*{title}" class="form-control" name="title" required="required" placeholder="Title">
+                    <p class="alert alert-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></p>
                 </div>
                 <div class="form-group">
-                    <label>Date</label>
-                    <input type="date" class="form-control" th:field = "*{date}" required="required">
+                    <input type="date" th:field="*{date}" class="form-control" name="date" required="required" placeholder="Date">
+                    <p class="alert alert-danger" th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></p>
                 </div>
                 <div class="form-group">
-                    <label >Image</label>
-                    <input class="form-control" type="file" name = "image" accept="image/png, image/jpeg">
+                    <input class="form-control" type="file" name="image" accept="image/png, image/jpeg" id="formFile" placeholder="Image">
+                    
                   </div>
                 <div class="form-group">
-                    <label>News Body</label>
-                    <textarea class = "form-control" th:field = "*{messageBody}" name="messageBody" rows="4" cols="55" required="required"></textarea>
+                    <textarea class = "form-control" th:field="*{messageBody}" id="text-area" name="messageBody" rows="4" cols="55" required="required" placeholder="Leave ur message"></textarea>
+                    <p class="alert alert-danger" th:if="${#fields.hasErrors('messageBody')}" th:errors="*{messageBody}"></p>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block btn-lg">Publish</button>
