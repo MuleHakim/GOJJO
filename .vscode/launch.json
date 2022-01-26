@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HouseApplication<house>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.Gojjo.house.HouseApplication",
+            "projectName": "house",
+            "args": ""
+        }
+    ]
+}

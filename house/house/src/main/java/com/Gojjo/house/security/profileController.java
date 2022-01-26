@@ -2,7 +2,7 @@ package com.Gojjo.house.security;
 
 import java.security.Principal;
 
-import com.gojjo.gojjo_app.post.PostService;
+import com.Gojjo.house.post.PostService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
