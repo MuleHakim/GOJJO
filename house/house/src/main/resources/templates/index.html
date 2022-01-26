@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gojjo Rental Application</title> 
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/forHome.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+</head>
+<style>
+  @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+  #anime{
+    font-family: cursive;
+    font-size: xx-large;
+  }
+  .typed-out {
+    overflow: hidden;
+  border-right: .15em solid rgb(24, 23, 23);
+  white-space: nowrap;
+  font-size: 1.6rem;
+  width: 0;
+  animation: 
+    typing 4s steps(50, end) forwards;
+  animation-iteration-count: infinite;
+}
+.AnimeC {
+  display: inline-block;
+}
+@media only screen and (max-width: 900px) {
+  #welcome {
+    display: flex;
+    flex-direction: column;
+
+  }
+  #discription{
+    margin: 5%;
+  
+  }
+}
+</style>
+<body style="background-color: whitesmoke;">
+  <header class="d-flex shadow align-items-center justify-content-center justify-content-md-between px-3 sticky-top bg-black">
+    <a href="/index" class="navbar-brand d-flex align-items-center">
+    <img src = "images/gojjologo.jpg" style = "height: 15vh; padding: 10%; margin-left: 10%;"></img>
+    </a>
+    <ul class="nav navbar-collapse justify-content-end ms-auto" id="navmenu">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{index}">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{homelist}" >Home List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{news}">GOJJO News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{about}">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{contact}">Contact</a>
+        </li>
+    </ul>
+
+    <div>
+        <a th:href="@{profile}"><img src="images/account.jpg" style = "height: 60px; border-radius: 50%;" alt="account_icon"></a>
+    </div>
+</header>
+  <main class = "bg-white px-3">
+    <br><br><br>
+    <div class="row" id="welcome">
+      <div class="col" id="discription" style="margin: 7%; margin-right: 5%; background-color: rgb(211, 207, 207); border-radius: 50px; padding: 5%;">
+        <div class="AnimeC">
+          <div class="typed-out" id="anime">  WELCOME TO GOJJO           |</div>
+        </div>
+        <br><br><br>
+        <p class="card-text">
+          GOJJO is an online common house renting web platform for both tenants and house owners,
+           with the system benefiting both tenants and house owners. House owners can register for
+            the website and create a personal profile page where they can provide all of the house's data,
+             including its location (city, sub-city, kebele), house number, price, number of rooms, and images.
+              Someone looking for a home can visit this website, look at the houses, and contact the owner.
+               <br><br> Additionally, you can get the latest News <a  th:href="@{news}">here</a> about home issues.   
+        </p>
+      </div>
+      <div class="col" style="padding-top:8% ;">
+        <img
+          width="80%"
+          height="90%"
+          src="images/search1.jpg"
+          
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- <div>
+      <div style="display: grid; grid-template-columns: 40%;">
+        <h3 class="card-title">GOJJO</h3>
+        <p class="card-text">
+          GOJJO is an online common house renting web platform for both tenants and house owners, with the system benefiting both tenants and house owners. House owners can register for the website and create a personal profile page where they can provide all of the house's data, including its location (city, sub-city, kebele), house number, price, number of rooms, and images. Someone looking for a home can go to the website, look at the houses, and contact the owner
+        </p>
+        </div>
+        <div style="display: grid; grid-template-columns: 40%;">
+          <img
+          width="90%"
+          height="90%"
+          src="images/real1.jpg"
+          
+          alt=""
+        />
+        </div>
+    </div> -->
+      <br><br><br>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-dark" style="color: whitesmoke;">
+            <div class="card-body text-center">
+              <img
+                src="images/real8.jpg"
+                class="mb-3 w-100"
+                alt=""
+              />
+              <h3 class="card-title mb-3"></h3>
+              
+              <p> location:Bole Addis Ababa</p>
+              <p>Price: 10,000 per month</p>
+              <p>contact phone: 0911223344</p>
+              <p class="card-text">Description:
+                residential home at Mariam Mazoria-Bole Bulbula with 8 Bed Rooms, tow terraces on the second floor,
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-dark" style="color:white ;">
+            <div class="card-body text-center">
+              <img
+                src="images/real3.jpg"
+                class="mb-3 w-100"
+                alt=""
+              />
+              <h3 class="card-title mb-3"></h3>
+              <p class="card-text">
+               
+                      
+              </p>
+              <p> location: Addis Ababa, Ethiopia;</p>
+              <p>Price: 10,000 per month</p>
+              <p>contact phone: 0911223344</p>
+              <p class="card-text">Description:
+                Fully furnished house for ret around jakros
+                6 bedroom ,6 bathroom, 2 kitchen,1 large living room
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-dark" style="color:white">
+            <div class="card-body text-center">
+              <img
+                src="images/real4.jpg"
+                class="mb-3 w-100"
+                alt=""
+              />
+              <h3 class="card-title mb-3"></h3>
+              <p class="card-text">
+                
+              </p>
+              <p> location:Bole, Addis Ababa</p>
+              <p>Price: 10,000 per month</p>
+              <p>contact phone: 0911223344</p>
+              <p class="card-text">Description:
+                Bright and beautiful family home situated in one of Bole’s premier locations, only moments away from shops and restaurants.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-dark" style="color:white">
+            <div class="card-body text-center">
+              <img
+                src="images/real5.jpg"
+                class="mb-3 w-100"
+                alt=""
+              />
+              <h3 class="card-title mb-3"></h3>
+              <p class="card-text">
+                
+                      Location: Bole, Addis Ababa, Ethiopia.
+              <p> location: Addis Ababa, Ethiopia;</p>
+              <p>Price: 10,000 per month</p>
+              <p>contact phone: 0911223344</p>
+              <p class="card-text">Description:
+                Green area avaliable
+                      The house is inside compound
+                      The house structire is G+1
+                      Price: 4,000$
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto py-4 " style = "width : 15%">
+          <a th:href="@{homelist}" class="btn btn-primary btn-sm px-4">see more</a>
+      </div>
+  </main>
+  <footer class="py-3 bg-black text-center">
+    <ul class="nav justify-content-center font-weight-bold">
+      <li class="nav-item"><a th:href="@{index}" class="nav-link px-2 ">Home</a></li>
+      <li class="nav-item"><a th:href="@{homelist}" class="nav-link px-2 ">List of houses</a></li>
+      <li class="nav-item"><a th:href="@{news}" class="nav-link px-2 ">News</a></li>
+      <li class="nav-item"><a th:href="@{about}" class="nav-link px-2 ">About</a></li>
+      <li class="nav-item"><a th:href="@{contact}" class="nav-link px-2 ">Contact</a></li>
+    </ul>
+    <p class="text-white">&copy; 2022 Allright Reserved.</p>
+    <a href="#" class="bottom-0 p-5">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+  </footer>
+  <script src = "js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

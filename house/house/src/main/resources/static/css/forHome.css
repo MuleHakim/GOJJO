@@ -1,0 +1,85 @@
+.nav-link{
+    color: rgb(30, 134, 185);
+    font-weight: bold;
+}
+.nav-link:hover{
+    color: rgb(152, 219, 252);
+    font-weight: bold;
+}
+.active { 
+    background-color:coral; 
+    color: white;
+    border-radius: 5px;
+}
+
+.nav-item{
+    margin-right: 0.5%;
+}
+
+.about{
+    padding:5% 0 5% 0;
+}
+.button{
+    margin:10% 0 10% 0;
+}
+.my_button{
+    text-decoration: none;
+    background-color: rgb(73, 151, 168);
+    color:white;
+    margin:10% 0 10% 0;
+    padding:15Px;
+    border-radius: 10px;
+}
+.contact{
+    display:flex;
+    list-style-type: none;
+}
+.contact li{
+    padding:10px;
+}
+.fas{
+    font-size: 50px;
+    color: #81c8e4;
+}
+
+.fas:hover{
+    color: white;
+}
+.fab{
+    color : white;
+    font-size : 50px;
+}
+.fa-facebook:hover{
+    color:#82a2e2;
+}
+
+.fa-facebook{
+    color:#4267B2;
+}
+
+.fa-twitter:hover{
+    color:#90d8f5;
+}
+
+.fa-twitter{
+    color:#00acee;
+}
+
+.fa-telegram{
+    color:#229ED9;
+}
+
+.fa-telegram:hover{
+    color: #11a9f0
+}
+
+.fa-instagram{
+    color:#bc2a8d;
+}
+
+.fa-instagram:hover{
+    color:#f3a7db;
+}
+
+
+
