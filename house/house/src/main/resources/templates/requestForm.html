@@ -59,9 +59,11 @@
             <div class="row">
               
                         <!-- <label class="form-label" for="houseType"></label> -->
+                        <div class=" col input-group align-self-end">
+                            <label class="form-label " for="houseType"></label>
+                            <div class="input-group-text">House Type</div>
                         <div class=" col">
                             <label class="form-label " for="houseType"></label>
-                           
                             <select th:class="| form-select ${#fields.hasErrors('houseType')? 'is-invalid':'is-valid'}|" th:field="*{houseType}">
                                 <option th:each="t:${type}" th:value="${t}" th:text="${t}" placeholder="Choose house type">Select type of room</option>
                             </select>
@@ -74,7 +76,6 @@
                         </div>
                 <div class="col">
                         <label class="form-label" for="city" > </label>
-
                         <input th:class="|form-control ${#fields.hasErrors('city')? 'is-invalid':'is-valid'}|" type="text" name="city" th:field="*{city}" placeholder="City "/>
                         <div
                         class="invalid-feedback"
@@ -83,9 +84,8 @@
                       ></div>
                 </div>
                 <div class="col">
-                    
+            
                     <label class="form-label" for="subcity" > </label>
-
                     <input th:class="|form-control ${#fields.hasErrors('subcity')? 'is-invalid':'is-valid'}|"
                     type="text" name="subcity" th:field="*{subcity}" placeholder="Subcity"/>
                     <div
@@ -93,14 +93,13 @@
                         th:if="${#fields.hasErrors('subcity')}"
                         th:errors="*{subcity}"
                       ></div>
-                
                 </div>
            </div>
         <div class="row  top-6">
 
-            <div class="col input-group">
+            <div class="col input-group align-self-end">
                 <label class="form-label" for="bedroom"></label>
-                
+                <div class="input-group-text">No. bedroom</div>
                 <input th:class="|form-control ${#fields.hasErrors('bedroom')? 'is-invalid':'is-valid'}|"
                 type="text" name="bedroom" th:field="*{bedroom}"  
                 placeholder="Type number of bedroom you want">
@@ -120,9 +119,9 @@
                 th:errors="*{district}"
               ></div>
             </div>
-            <div class="col input-group">
+            <div class="col input-group align-self-end">
                 <label class="form-label " for="price"></label>
-                <div class="input-group-text">Br</div>
+                <div class="input-group-text">price range</div>
                 <input th:class="|form-control ${#fields.hasErrors('price')? 'is-invalid':'is-valid'}|" 
                 type="text"  name="price" th:field="*{price}" placeholder=" price">
                 <div
@@ -175,10 +174,14 @@
                 th:errors="*{email}"
               ></div>
             </div>
-            <div class="col">
-                <input  type="submit" class="btn btn-primary justify-content-right" value="Submit request"/>
+            <div class="col-auto align-self-end ">
+                <input  type="submit" class="btn btn-primary " value="Submit request"/>
+              
             </div>
-        </div> 
+         </div> 
+        </div>
+        <div>
+            <a class = "btn btn-primary justify-content-left" th:href="@{profile}">Back</a>
         </div>
     </form>
     </div>
