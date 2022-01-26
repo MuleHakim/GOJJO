@@ -47,15 +47,15 @@
               <div class="input-group-text">You Have New Request from </div>
               <h3 id="fullName"class="card-title mb-3" th:text="${request.fullName}">Ismael</h3>
             </div>
-            <p> City: <span th:text ="${request.city}"></span>,Ethiopia;</p>
-            <p> Sub City: <span th:text ="${request.subcity}"></span> </p>
-            <p> District: <span th:text ="${request.district}"></span></p>
-            <p>Price: <span th:text="${request.price}"></span></p>
-            <p>Type: <span th:text="${request.houseType}"></span></p>
-            <p> description: <span th:text="${request.description}"></span></p>
-            <p>contact phone: <span th:text="${request.phone}"></span></p>
-            <p>bedroom: <span th:text="${request.bedroom}"></span></p>
-            <p>Email: <span th:text="${request.email}"></span></p>
+            <p> <b>City:</b> <span th:text ="${request.city}"></span>,Ethiopia;</p>
+            <p> <b>Sub City: </b><span th:text ="${request.subcity}"></span> </p>
+            <p> <b>District:</b> <span th:text ="${request.district}"></span></p>
+            <p><b>Price: </b><span th:text="${request.price}"></span></p>
+            <p><b>Type:</b> <span th:text="${request.houseType}"></span></p>
+            <p><b>Contact phone:</b> <span th:text="${request.phone}"></span></p>
+            <p><b>Bedroom:</b> <span th:text="${request.bedroom}"></span></p>
+            <p><b>Email: </b><span th:text="${request.email}"></span></p>
+            <p><b>Description:</b> <span th:text="${request.description}"></span></p>
           </div>
           <p><a th:href="@{'/remove/' + ${request.id}}" class = "btn btn-danger" >Delete</a></p>
         </div>

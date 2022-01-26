@@ -32,6 +32,12 @@ public class ListController {
         return "redirect:/UserList";
     }
 
+    @GetMapping("/deleteAccount/{id}")
+    public String deleteAccount(@PathVariable(name = "id") Long id){
+        userService.deleteUserById(id);
+        return "redirect:/login";
+    }
+
     @GetMapping("/showUserEditForm/{id}")
     public String showUserEditForm(@PathVariable(name ="id") Long id, Model model){
        
